@@ -15,15 +15,19 @@
         height: 600px;
         background: url(./windrader-wind-power-fichtelberg-wind-park.jpg) no-repeat center center fixed;
         background-size: cover; /* proportional resize */
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
         -webkit-transition: background 2s;
         -moz-transition: background 2s;
         -o-transition: background 2s;
         transition: background 2s ease-in-out;
       }
+      .capability {
+        transition: text 2s;
+      }
       .far {
         color: white;
+        opacity: 0.1;
       }
       .centred {
          position: absolute;
@@ -40,7 +44,7 @@
         opacity: 0;
       }
       .far:hover {
-        color: black;
+        opacity: 1;
       }
     </style>
 
@@ -79,36 +83,41 @@
       </div>
       <div id= "divWithBgImage" class="divWithBgImage">
         <div id="bigphone" class="centred">
-          <a href="mailto:mike.green@metsolutions.co.nz">
+            <h3 id="capability" class="capability card-title text-white">Forecasting the weather's role in energy generation</h3>
+            <a href="mailto:mike.green@metsolutions.co.nz">
             <i class="far fa-envelope fa-10x"></i>
           </a>
         </div>
       </div>
 
-        <div class="card-body  text-white ">
-          <h4 class="card-title">Primary card title</h4>
-          <h4 class="card-title">Primary card title</h4>
-        </div>
-
         <script>
           var bgImageSources = [
-          './grey-asphalt-road-surrounded-by-trees-760980.jpg',
-          './nature-forest-waves-trees-2438.jpg',
+          './abandoned-forest-industry-nature-34950.jpg',
           './adventure-branch-bridge-daylight-403781.jpg',
           './pexels-photo-210267.jpeg',
+          './grey-asphalt-road-surrounded-by-trees-760980.jpg',
           './windrader-wind-power-fichtelberg-wind-park.jpg']
+
+          var capabilities = [
+            "Assessing safety implications of weather in engineering projects",
+            "Supporting architectural decisions on wind loading of buildings",
+            "Monitoring weather's influence on fire safety in forestry",
+            "Projection of future water supply levels",
+            "Forecasting the weather's role in energy generation"]
 
           function animateBackground() {
             window.setTimeout(function(){
               var url = bgImageSources[bgImageSources.push(bgImageSources.shift()) - 1];
-              $('#divWithBgImage').delay(4000).fadeOut(1000, function(){
-                $(this).css("background", "url(" + url + ") no-repeat center center fixed")
-              }).fadeIn(1000, animateBackground())
-            });
+              var txt = capabilities[capabilities.push(capabilities.shift()) - 1];
+              $("#divWithBgImage").css('background-image', "url(" + url + ")");
+              $("#capability").fadeOut("slow", function() {
+                $("#capability").text(txt).fadeIn("slow");
+              });
+              animateBackground();
+            },4000);
           }
-          $('#divWithBgImage').delay(0).fadeIn(1000, animateBackground());
+          animateBackground();
 
-//          $("#divWithBgImage").delay(2000).css('background', "url('./grey-asphalt-road-surrounded-by-trees-760980.jpg') no-repeat center center fixed");
         </script>
       </body>
 
