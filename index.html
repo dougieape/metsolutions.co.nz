@@ -8,26 +8,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./bootstrap-cerulean.css" media="screen">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="preload" as="image" href="./abandoned-forest-industry-nature-34950.jpg">
-    <link rel="preload" as="image" href="./adventure-branch-bridge-daylight-403781.jpg">
-    <link rel="preload" as="image" href="./pexels-photo-210267.jpeg">
-    <link rel="preload" as="image" href="./grey-asphalt-road-surrounded-by-trees-760980.jpg">
-    <link rel="preload" as="image" href="./windrader-wind-power-fichtelberg-wind-park.jpg">
+    <link rel="preload" as="image" href="./images/windrader-wind-power-fichtelberg-wind-park.jpg">
+    <link rel="preload" as="image" href="./images/architecture-buildings-city-34121.jpg">
+    <link rel="preload" as="image" href="./images/art-break-broken-414752.jpg">
+    <link rel="preload" as="image" href="./images/4k-wallpaper-dam-dawn-2699258.jpg">
+    <link rel="preload" as="image" href="./images/adventure-architecture-bay-196667.jpg">
 <style>
       .divWithBgImage {
-        position: absolute;
         width: 100%;
-        height: 600px;
-        background: url(./windrader-wind-power-fichtelberg-wind-park.jpg) no-repeat center center fixed;
+        height: 500px;
+        background: url(./images/adventure-architecture-bay-196667.jpg) no-repeat center center fixed;
         background-size: cover; /* proportional resize */
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
-        -webkit-transition: background 2s;
-        -moz-transition: background 2s;
-        -o-transition: background 2s;
-        transition: background 2s ease-in-out;
+        -webkit-transition: background-image 2s;
+        -moz-transition: background-image 2s;
+        -o-transition: background-image 2s;
+        transition: background-image 2s ease-in-out;
       }
       .capability {
+        text-shadow: 0px 5px 10px gray,
+                    0px -5px 10px gray;
         transition: text 2s;
       }
       .far {
@@ -43,7 +44,8 @@
          left: 0;
          height: 200px;
          width:100%; 
-         text-align:center
+         text-align:left;
+         padding: 4rem 2rem;
       }
       .ctr {
         opacity: 0;
@@ -56,9 +58,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
-    <body style="overflow: hidden;">
+    <body>
       <div class="bs-component">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="mailto:mike.green@metsolutions.co.nz">Meteorology Solutions Ltd</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -67,32 +69,33 @@
           <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" target="_blank" href="./kiwirail/weatherstatusapp.html">KiwiRail</a>
+                <a class="nav-link" target="_blank" href="./kiwirail/weatherstatusapp.html">Weather Status</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mailto:mike.green@metsolutions.co.nz">Sales</a>
+                <a class="nav-link" target="_blank" href="./kiwirail/tarp.html">TARP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mailto:mike.green@metsolutions.co.nz">Support</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:mike.green@metsolutions.co.nz">Contact</a>
+                <a class="nav-link" href="mailto:mike.green@metsolutions.co.nz">Contact Us</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div>
         </nav>
       </div>
       <div id= "divWithBgImage" class="divWithBgImage">
         <div id="bigphone" class="centred">
-            <h3 id="capability" class="capability card-title text-white">Forecasting the weather's role in energy generation</h3>
-            <a href="mailto:mike.green@metsolutions.co.nz">
-            <i class="far fa-envelope fa-10x"></i>
-          </a>
+            <h3 id="capability" class="capability card-title text-white">Experts in urban and mountain meteorology</h3>
+            
         </div>
+      </div>
+      <div class="jumbotron">
+        <h3 class="display-5">Meteorology Solutions Ltd</h3>
+        <p class="lead">Engineering problems solved using meteorology</p>
+        <hr class="my-4">
+        <p>We work with geologists, engineers, and architects to put weather impacts into context.</p>
+        <p>We make it our passion to understand all of our clients weather needs and risks.</p>
+        <p class="lead">
+          <a class="btn btn-info btn-lg" href="#" role="button">Contact Us</a>
+        </p>
       </div>
 
     <!-- Optional JavaScript -->
@@ -102,24 +105,26 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script>
           var bgImageSources = [
-          './abandoned-forest-industry-nature-34950.jpg',
-          './adventure-branch-bridge-daylight-403781.jpg',
-          './pexels-photo-210267.jpeg',
-          './grey-asphalt-road-surrounded-by-trees-760980.jpg',
-          './windrader-wind-power-fichtelberg-wind-park.jpg']
+          'windrader-wind-power-fichtelberg-wind-park.jpg',
+          'architecture-buildings-city-34121.jpg',
+          'art-break-broken-414752.jpg',
+          '4k-wallpaper-dam-dawn-2699258.jpg',
+          'adventure-architecture-bay-196667.jpg']
 
           var capabilities = [
-            "Assessing safety implications of weather in engineering projects",
-            "Supporting architectural decisions on wind loading of buildings",
-            "Monitoring weather's influence on fire safety in forestry",
-            "Projection of future water supply levels",
-            "Forecasting the weather's role in energy generation"]
+            //"Making sure we understand all of our clients weather needs and risks",
+            //"Working with geologists, engineers, and architects to put weather impacts into context",
+            "Locating and quantifying energy generation of potential wind farms anywhere in the world",
+            "Urban wind impact assessments for council consent and for urban design",
+            "Forensic meteorology and expert witness work",
+            "Wind energy forecasting, and rainfall and flow predictions for hydro-generation",
+            "Experts in urban and mountain meteorology"]
 
           function animateBackground() {
             window.setTimeout(function(){
               var url = bgImageSources[bgImageSources.push(bgImageSources.shift()) - 1];
               var txt = capabilities[capabilities.push(capabilities.shift()) - 1];
-              $("#divWithBgImage").css('background-image', "url(" + url + ")");
+              $("#divWithBgImage").css('background-image', "url(./images/" + url + ")");
               $("#capability").fadeOut("slow", function() {
                 $("#capability").text(txt).fadeIn("slow");
               });
