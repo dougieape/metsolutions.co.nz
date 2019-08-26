@@ -1,0 +1,129 @@
+.bubble li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 25px;
+    border: 1px solid #000000;
+}
+
+.day{
+    color: #000;
+}
+
+.night{
+    color: #fff;
+}
+
+canvas, #legend{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#logo {
+	width: 200px;
+    padding-bottom: 15px;
+}
+
+.chartjsLegend {
+	line-height: 20px;
+    font-size: 15px;
+}
+
+.line li span {
+    display: inline-block;
+    width: 17px;
+    height: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+}
+
+
+*{
+	font-family: "Helvetica Neue", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 575;
+}
+
+
+.flipswitch {
+  float: left;
+  left: 35px;
+  position: relative;
+  width: 78px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select: none;
+}
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #3e3e3e;
+  border-radius: 48px;
+}
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -ms-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 22px;
+  padding: 0;
+  line-height: 22px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flipswitch-inner:before {
+  content: "Day";
+  padding-left: 13px;
+  background-color: #EEEEEE;
+  color: #666666;
+}
+.flipswitch-inner:after {
+  content: "Night";
+  padding-right: 13px;
+  background-color: #666666;
+  color: #EEEEEE;
+  text-align: right;
+}
+.flipswitch-switch {
+  width: 26px;
+  margin: -2px;
+  background: #EEEEEE;
+  border: 2px solid #3e3e3e;
+  border-radius: 48px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 54px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}

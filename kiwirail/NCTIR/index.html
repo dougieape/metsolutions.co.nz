@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>KiwiRail TARP - NCTIR</title>
+	<script src="scripts/Chart.bundle.min.js"></script>
+	<script src="scripts/plugins.js"></script>
+	<script src="scripts/chartjs-plugin-annotation.min.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/newChart.js"></script>
+
+</head>
+<body>
+	<canvas id="myChart" width="700" height="700" style="display: block;float: left;"></canvas>
+	<canvas id="myChart2" width="700" height="700" style="display: block;float: left;"></canvas>
+	<div id='legend'>
+		<!-- <h2>Legend</h2> -->
+		<img id="logo" src='NCTIR.png'>
+		<div id='chartjsLegend' class='chartjsLegend'></div>
+	</div>
+	<script type="text/javascript">
+		newChart("myChart","South Rainfall TARP.csv")
+		newChart("myChart2","North Rainfall TARP.csv")
+	</script>
+</body>
+</html>

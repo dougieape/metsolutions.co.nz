@@ -19,6 +19,8 @@
         height: 500px;
         background: url(./images/adventure-architecture-bay-196667.jpg) no-repeat center center fixed;
         background-size: cover; /* proportional resize */
+        background-color: #555555;
+        background-blend-mode: overlay;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
         -webkit-transition: background-image 2s;
@@ -53,6 +55,9 @@
       .far:hover {
         opacity: 1;
       }
+      .navbar-brand {
+        font-size: 2rem;
+      }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -67,15 +72,15 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" target="_blank" href="./kiwirail/weatherstatusapp.html">Weather Status</a>
+                <a class="nav-link btn btn-primary m-2" target="_blank" href="./kiwirail/weatherstatusapp.html">Weather Status App</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" target="_blank" href="./kiwirail/tarp.html">TARP</a>
+                <a class="nav-link btn btn-primary m-2" target="_blank" href="./kiwirail/tarp.html">TARP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mailto:mike.green@metsolutions.co.nz">Contact Us</a>
+                <a class="nav-link btn btn-primary m-2" href="mailto:mike.green@metsolutions.co.nz">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -83,17 +88,17 @@
       </div>
       <div id= "divWithBgImage" class="divWithBgImage">
         <div id="bigphone" class="centred">
-            <h3 id="capability" class="capability card-title text-white">Experts in urban and mountain meteorology</h3>
+            <h3 id="capability" class="capability card-title text-white">Experts in urban & mountain meteorology</h3>
             
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="jumbotron mb-0">
         <h3 class="display-5">Meteorology Solutions Ltd</h3>
         <p class="lead">Engineering problems solved using meteorology</p>
         <hr class="my-4">
         <p>We work with geologists, engineers, and architects to put weather impacts into context.</p>
-        <p>We make it our passion to understand all of our clients weather needs and risks.</p>
-        <p class="lead">
+        <p>It is our passion to understand all of our clients weather needs and risks.</p>
+        <p class="lead mt-4">
           <a class="btn btn-info btn-lg" href="#" role="button">Contact Us</a>
         </p>
       </div>
@@ -114,11 +119,11 @@
           var capabilities = [
             //"Making sure we understand all of our clients weather needs and risks",
             //"Working with geologists, engineers, and architects to put weather impacts into context",
-            "Locating and quantifying energy generation of potential wind farms anywhere in the world",
-            "Urban wind impact assessments for council consent and for urban design",
-            "Forensic meteorology and expert witness work",
-            "Wind energy forecasting, and rainfall and flow predictions for hydro-generation",
-            "Experts in urban and mountain meteorology"]
+            "Locating & quantifying energy generation of potential wind farms worldwide",
+            "Urban wind impact assessments for council consent & for urban design",
+            "Forensic meteorology & expert witness work",
+            "Wind energy forecasting, & rainfall & flow predictions for hydro-generation",
+            "Experts in urban & mountain meteorology"]
 
           function animateBackground() {
             window.setTimeout(function(){
@@ -129,7 +134,7 @@
                 $("#capability").text(txt).fadeIn("slow");
               });
               animateBackground();
-            },4000);
+            },5000);
           }
           animateBackground();
 
