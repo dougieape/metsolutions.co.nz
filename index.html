@@ -14,10 +14,11 @@
     <link rel="preload" as="image" href="./images/4k-wallpaper-dam-dawn-2699258.jpg">
     <link rel="preload" as="image" href="./images/adventure-architecture-bay-196667.jpg">
 <style>
-      .divWithBgImage {
+      .bannerImage {
         width: 100%;
-        height: 500px;
-        background: url(./images/adventure-architecture-bay-196667.jpg) no-repeat center center fixed;
+        height: 300px;
+        background: url(./images/adventure-architecture-bay-196667.jpg) no-repeat;
+        background-position: 70% 20%;
         background-size: cover; /* proportional resize */
         background-color: #555555;
         background-blend-mode: overlay;
@@ -27,6 +28,7 @@
         -moz-transition: background-image 2s;
         -o-transition: background-image 2s;
         transition: background-image 2s ease-in-out;
+        display: flex;
       }
       .capability {
         text-shadow: 0px 5px 10px gray,
@@ -37,27 +39,34 @@
         color: white;
         opacity: 0.1;
       }
-      .centred {
-         position: absolute;
-         margin: auto;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-         height: 200px;
-         width:100%; 
-         text-align:left;
-         padding: 4rem 2rem;
-      }
       .ctr {
         opacity: 0;
       }
       .far:hover {
         opacity: 1;
       }
-      @media only screen and (min-width: 992px) {
+      h3 {
+        font-size: 1.5rem;
+      }
+      @media only screen and (min-width: 576px) {
         .navbar-brand {
           font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.75rem;
+        }
+        .bannerImage {
+          height: 300px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .bannerImage {
+          height: 400px;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        .bannerImage {
+          height: 500px;
         }
       }
     </style>
@@ -88,12 +97,13 @@
           </div>
         </nav>
       </div>
-      <div id= "divWithBgImage" class="divWithBgImage">
-        <div id="bigphone" class="centred">
-            <h3 id="capability" class="capability card-title text-white">Experts in urban & mountain meteorology</h3>
-            
+
+      <div id="bannerImage" class="bannerImage img-fluid px-0">
+        <div class="my-auto px-3 position-relative">
+          <h3 id="capability" class="capability card-title text-white">Experts in urban & mountain meteorology</h3>
         </div>
       </div>
+
       <div class="jumbotron mb-0">
         <h3 class="display-5">Meteorology Solutions Ltd</h3>
         <p class="lead">Using meteorology to optimise engineering solutions</p>
@@ -108,6 +118,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jarallax-0.2.4b.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script>
@@ -119,8 +130,6 @@
           'adventure-architecture-bay-196667.jpg']
 
           var capabilities = [
-            //"Making sure we understand all of our clients weather needs and risks",
-            //"Working with geologists, engineers, and architects to put weather impacts into context",
             "Locating & quantifying energy generation of potential wind farms worldwide",
             "Urban wind impact assessments for council consent & for urban design",
             "Forensic meteorology & expert witness work",
@@ -131,7 +140,7 @@
             window.setTimeout(function(){
               var url = bgImageSources[bgImageSources.push(bgImageSources.shift()) - 1];
               var txt = capabilities[capabilities.push(capabilities.shift()) - 1];
-              $("#divWithBgImage").css('background-image', "url(./images/" + url + ")");
+              $("#bannerImage").css('background-image', "url(./images/" + url + ")");
               $("#capability").fadeOut("slow", function() {
                 $("#capability").text(txt).fadeIn("slow");
               });
