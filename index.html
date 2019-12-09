@@ -13,7 +13,12 @@
     <link rel="preload" as="image" href="./images/art-break-broken-414752.jpg">
     <link rel="preload" as="image" href="./images/4k-wallpaper-dam-dawn-2699258.jpg">
     <link rel="preload" as="image" href="./images/adventure-architecture-bay-196667.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 <style>
+      body {
+        font-family: 'Montserrat', sans-serif;font-family: 'Montserrat', sans-serif;
+      }
       .bannerImage {
         width: 100%;
         height: 300px;
@@ -44,6 +49,9 @@
       }
       .far:hover {
         opacity: 1;
+      }
+      .navbar-brand {
+          font-size: 1rem;
       }
       h3 {
         font-size: 1.5rem;
@@ -77,7 +85,7 @@
     <body>
       <div class="bs-component">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="mailto:mike.green@metsolutions.co.nz"><img src="./images/MetSolLogoWhite.png" width="300" alt=""></a>
+          <a class="navbar-brand" href="mailto:mike.green@metsolutions.co.nz">Meteorology Solutions Ltd</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -99,20 +107,77 @@
       </div>
 
       <div id="bannerImage" class="bannerImage img-fluid px-0">
-        <div class="my-auto px-3 position-relative">
+        <div class="container my-auto px-3 position-relative">
           <h3 id="capability" class="capability card-title text-white">Experts in urban & mountain meteorology</h3>
         </div>
       </div>
 
       <div class="jumbotron mb-0">
-        <h3 class="display-5">Meteorology Solutions Ltd</h3>
-        <p class="lead">Using meteorology to optimise engineering solutions</p>
-        <hr class="my-4">
-        <p>We work with geologists, engineers, and architects to put weather impacts into context.</p>
-        <p>It is our passion to understand all of our clients weather needs and risks.</p>
-        <p class="lead mt-4">
-          <a class="btn btn-info btn-lg" href="mailto:mike.green@metsolutions.co.nz" role="button">Contact Us</a>
-        </p>
+        <div class="container">
+              <h3 class="display-5">Meteorology Solutions Ltd</h3>
+              <p class="lead">Using meteorology to optimise engineering solutions</p>
+              <hr class="my-4">
+              <p>We work with geologists, engineers, and architects to put weather impacts into context.</p>
+              <p>It is our passion to understand all of our clients weather needs and risks.</p>
+              <p class="lead mt-4">
+                <a class="btn btn-info btn-lg" href="mailto:mike.green@metsolutions.co.nz" role="button">Contact Us</a>
+              </p>
+        </div>
+      </div>
+
+      <div class="jumbotron mb-0 bg-light">
+        <div class="container">
+          <div class="row">
+          <div class="col-12 col-md mb-4 mb-md-0">
+              <div class="card text-white border-0">
+                  <img src="./images/josh-rose-trYl7JYATH0-unsplash.jpg" style="object-fit:cover; object-position: top; max-height:300px;" class="card-img-top rounded" alt="...">
+                  <div class="card-img-overlay d-flex flex-column">
+                    <h4 class="card-title">Weather Status App</h4>
+                    <h5 class="card-subtitle mb-2 text-light">5-day forecasts, updated Mon, Wed & Fri.</h5>
+                    <p class="card-text">Weather Risk Matrix</p>
+                    <p class="card-text">Heat Risk Matrix</p>
+                    <p class="card-text">GIS Viewer Link</p>
+                    <div class="flex-grow-1"></div>
+                    <a href="mailto:dougie@apeit.nz" class="btn btn-secondary">Open Weather Status App</a>
+                    <a style="position:absolute; top: 0; right: 0; background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@joshsrose" target="_blank" rel="noopener noreferrer" title="Photo by Josh Rose">
+                      <span style="display:inline-block;padding:0">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="height:8px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+                          <title>Photo by Josh Rose</title>
+                          <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md">
+              <div class="card text-white border-0">
+                  <img src="./images/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg" style="object-fit:cover; object-position: top; max-height:300px;" class="card-img-top rounded" alt="...">
+                  <div class="card-img-overlay d-flex flex-column">
+                    <h4 class="card-title">TARP</h5>
+                    <h5 class="card-subtitle mb-2 text-light">Prototype app for risk threshold checks </h6>
+                    <p class="card-text">4-day forecasts for risk from cumulative rainfall</p>
+                    <div class="flex-grow-1"></div>
+                    <a href="mailto:dougie@apeit.nz" class="btn btn-secondary">Open TARP</a>
+                    <a style="position:absolute; top: 0; right: 0; background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@ripato" target="_blank" rel="noopener noreferrer" title="Photo by Ricardo Gomez Angel">
+                      <span style="display:inline-block;padding:0">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="height:8px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+                          <title>Photo by Ricardo Gomez Angel</title>
+                          <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-dark text-white text-center">
+        <div class="container">
+          A responsive website by&nbsp;<a href="https://apeit.nz" target="_blank"><img width="60" class="m-1" src="images/apelogov1white.png"></a>
+        </div>
       </div>
 
     <!-- Optional JavaScript -->
