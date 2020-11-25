@@ -1,8 +1,14 @@
-<?php
-$file_url = 'https://f002.backblazeb2.com/file/KaikouraTARP/KaikouraRecentAndForecastRain.csv';
-header('Content-Type: application/octet-stream');
-header("Content-Transfer-Encoding: Binary"); 
-header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\""); 
-readfile($file_url);
-exit();
+<?Php
+$file_url = 'https://www.dropbox.com/s/ak5zqq7bg977uj8/KaikouraRecentAndForecastRain.csv?dl=1';
+echo "<html><body><table border=1>\n\n";
+$f = fopen($file_url, "r");
+while (($line = fgetcsv($f)) !== false) {
+        echo "<tr>";
+        foreach ($line as $cell) {
+                echo "<td>" . htmlspecialchars($cell) . "</td>";
+        }
+        echo "<tr>\n";
+}
+fclose($f);
+echo "\n</table></body></html>";
 ?>
